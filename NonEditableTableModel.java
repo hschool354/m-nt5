@@ -1,0 +1,18 @@
+package newproject;
+
+import javax.swing.table.DefaultTableModel;
+
+public class NonEditableTableModel extends DefaultTableModel {
+    public NonEditableTableModel() {
+        super();
+    }
+
+    public NonEditableTableModel(Object[][] data, Object[] columnNames) {
+        super(data, columnNames);
+    }
+
+    @Override
+    public boolean isCellEditable(int row, int column) {
+        return false;
+    }
+}
